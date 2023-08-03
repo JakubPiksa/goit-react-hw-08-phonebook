@@ -1,14 +1,33 @@
 import React, { useState } from 'react';
-import css from './contactForm.module.css'
-
+import { connect } from 'react-redux';
+import { addContact } from '../../store/reducers/contacts';
+import { nanoid } from 'nanoid';
+import { useSelector } from 'react-redux';
+import css from './contactForm.module.css';
 
 const ContactForm = ({ onAddContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const handleSubmit = (event) => {
+  const contacts = useSelector(state => state.contacts);
+
+  const handleSubmit = event => {
     event.preventDefault();
-    onAddContact(name, number);
+
+    const existingContactWithNumber = contacts.find(contact => contact.number === number);
+    const existingContactWithName = contacts.find(contact => contact.name === name);
+
+    if (existingContactWithNumber) {
+      alert('This phone number is already saved.');
+      return;
+    }
+
+    if (existingContactWithName) {
+      alert('This contact name is already saved.');
+      return;
+    }
+
+    onAddContact({ id: nanoid(), name, number });
     setName('');
     setNumber('');
   };
@@ -20,9 +39,9 @@ const ContactForm = ({ onAddContact }) => {
         type="text"
         name="name"
         value={name}
-        onChange={(event) => setName(event.target.value)}
+        onChange={event => setName(event.target.value)}
         placeholder="Name"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        pattern="^[a-zA-Zа-яА-Я]+([' -]?[a-zA-Zа-яА-Я ]?[a-zA-Zа-яА-Я]*)*$"
         title="Name may contain only letters, apostrophe, dash and spaces."
         required
       />
@@ -31,15 +50,21 @@ const ContactForm = ({ onAddContact }) => {
         type="tel"
         name="number"
         value={number}
-        onChange={(event) => setNumber(event.target.value)}
+        onChange={event => setNumber(event.target.value)}
         placeholder="Phone number"
         pattern="\d{1,9}"
         title="Phone number must contain numbers only"
         required
       />
-      <button type="submit" className={css.button}>Add Contact</button>
+      <button type="submit" className={css.button}>
+        Add Contact
+      </button>
     </form>
   );
 };
 
-export default ContactForm;
+const mapDispatchToProps = dispatch => ({
+  onAddContact: contact => dispatch(addContact(contact)),
+});
+
+export default connect(null, mapDispatchToProps)(ContactForm);
