@@ -5,7 +5,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Implement login logic here
+    // TU BĘDZIE LOGIKA LOGOWANIA, ALE NAJPIERW MUSZE TO OGARNĄĆ XD
   };
 
   return (

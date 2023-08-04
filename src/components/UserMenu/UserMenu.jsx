@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserMenu = () => {
   const handleLogout = () => {
-    // Implement logout logic here
+    // WYLOGOWYWANIE ALE NAJPIERW NAUKA
   };
 
   return (
