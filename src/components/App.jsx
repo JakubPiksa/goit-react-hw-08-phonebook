@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Navigation from './Navigation';
-import Register from './Register';
-import Login from './Login';
-import Contacts from './Contacts';
+import Navigation from './Navigation/Navigation'; // Sprawdź poprawność ścieżki
+import Register from './Register/Register'; // Sprawdź poprawność ścieżki
+import Login from './Login/Login'; // Sprawdź poprawność ścieżki
+import Contacts from './Contacts/Contacts'; // Sprawdź poprawność ścieżki
 
 const App = () => {
   return (
