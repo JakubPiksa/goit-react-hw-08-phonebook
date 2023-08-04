@@ -5,7 +5,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
 
   const handleRegister = () => {
-    // Implement registration logic here
+    // TU SE ZROBIE LOGIKE REJESTRACJI
   };
 
   return (

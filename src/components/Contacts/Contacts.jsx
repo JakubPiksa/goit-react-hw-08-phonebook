@@ -1,5 +1,5 @@
 import React from 'react';
-import UserMenu from './UserMenu';
+import UserMenu from '../UserMenu/UserMenu';
 
 const Contacts = () => {
   return (
