@@ -1,0 +1,14 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeTitle {
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.homeText {
+  font-family: 'Comic Sans MS', sans-serif;
+}

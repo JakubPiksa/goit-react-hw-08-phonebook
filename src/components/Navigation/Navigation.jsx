@@ -7,13 +7,13 @@ const Navigation = () => {
     <nav className={css.nav}>
       <ul className={css.navList}>
         <li className={css.navItem}>
-          <Link to="/">Home</Link>
+          <Link to="/"><button className={css.navBtn}>Home</button></Link>
         </li>
         <li className={css.navItem}>
-          <Link to="/register">Register</Link>
+          <Link to="/register"><button className={css.navBtn}>Register</button></Link>
         </li>
         <li className={css.navItem}>
-          <Link to="/login">Login</Link>
+          <Link to="/login"><button className={css.navBtn}>Login</button></Link>
         </li>
       </ul>
     </nav>

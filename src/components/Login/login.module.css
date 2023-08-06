@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 250%;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.email {
+  border: 2px solid #e8e8e8;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f0f4fc;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px;
+}
+
+.password {
+  border: 2px solid #e8e8e8;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f0f4fc;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px;
+}
+
+.loginBtn {
+  border: 2px solid #e8e8e8;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffbcbc;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loginBtn:hover:focus {
+  outline-color: white;
+  background-color: #1a3419;
+  color: #e8e8e8;
+  box-shadow: 5px 5px #324335;
+  transition: all 0.3s;
+}
