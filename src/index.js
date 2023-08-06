@@ -9,7 +9,7 @@ import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename="goit-react-hw-08-movies">
         <App />
       </Router>
     </Provider>
