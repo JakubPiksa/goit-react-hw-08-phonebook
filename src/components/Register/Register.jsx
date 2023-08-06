@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { register } from 'auth/operations';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [login, setLogin] = useState('')
+  const [login, setLogin] = useState('');
+  const dispatch = useDispatch();
 
   const handleRegister = () => {
-    // TU SE ZROBIE LOGIKE REJESTRACJI
+    dispatch(register({ login, email, password }));
   };
 
   return (

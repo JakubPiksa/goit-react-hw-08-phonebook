@@ -14,8 +14,8 @@ const App = () => {
     <div>
       <Navigation />
       <Routes>
-        <Route path="/" exact component={Home} />
-        <Route exact path="/register" element={<RestrictedRoute redirectTo="/register" component={<Register />} />} />
+        <Route exact path="/"  element={<Home/>} />
+        <Route exact path="/register" element={<Register />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/contacts" element={<Contacts />} />
       </Routes>
