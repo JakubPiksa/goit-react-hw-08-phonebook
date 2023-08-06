@@ -11,7 +11,7 @@ const contactsSlice = createSlice({
     },
     deleteContact: (state, action) => {
       const updatedState = state.filter((contact) => contact.id !== action.payload);
-      localStorage.setItem('contacts', JSON.stringify(updatedState)); 
+      localStorage.setItem('contacts', JSON.stringify(updatedState));
       return updatedState;
     },
     setContacts: (state, action) => {

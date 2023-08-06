@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { login } from 'auth/operations'; 
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [login, setLogin] = useState('');
-  const dispatch = useDispatch();
 
   const handleLogin = () => {
-    dispatch(login({ login, email, password }));
+    // Implement login logic here
   };
 
   return (

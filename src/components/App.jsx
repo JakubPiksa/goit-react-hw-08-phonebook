@@ -7,17 +7,15 @@ import Contacts from './Contacts/Contacts';
 import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
 import Home from './Home/Home';
 
-
-
 const App = () => {
   return (
     <div>
       <Navigation />
       <Routes>
-        <Route exact path="/"  element={<Home/>} />
-        <Route exact path="/register" element={<Register />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/contacts" element={<Contacts />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contacts" element={<RestrictedRoute redirectTo="/login" component={<Contacts />} />} />
       </Routes>
     </div>
   );
