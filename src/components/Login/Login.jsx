@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations'; 
-
 const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
@@ -16,7 +15,7 @@ const Login = () => {
     <div>
       <h2>Login</h2>
       <input
-        type="email" 
+        type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
@@ -27,7 +26,9 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button type="submit" onClick={handleLogin}>Login</button> 
+      <button type="submit" onClick={handleLogin}>
+        Login
+      </button>
     </div>
   );
 };

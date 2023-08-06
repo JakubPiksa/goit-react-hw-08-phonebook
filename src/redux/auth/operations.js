@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { setAuthHeader, clearAuthHeader } from '../../api';
+import { setAuthHeader, clearAuthHeader } from 'api';
+import axios from 'api'; 
 
 export const register = createAsyncThunk(
   'auth/register',
