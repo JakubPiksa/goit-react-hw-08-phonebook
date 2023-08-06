@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [login, setLogin] = useState('')
 
   const handleRegister = () => {
     // TU SE ZROBIE LOGIKE REJESTRACJI
@@ -11,6 +12,12 @@ const Register = () => {
   return (
     <div>
       <h2>Register</h2>
+      <input
+        type="login"
+        value={login}
+        onChange={(e) => setLogin(e.target.value)}
+        placeholder="Login"
+      />
       <input
         type="email"
         value={email}

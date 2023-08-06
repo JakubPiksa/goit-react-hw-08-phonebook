@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [login, setLogin] = useState('')
+  
+  
   const handleLogin = () => {
     // TU BĘDZIE LOGIKA LOGOWANIA, ALE NAJPIERW MUSZE TO OGARNĄĆ XD
   };
@@ -11,6 +13,12 @@ const Login = () => {
   return (
     <div>
       <h2>Login</h2>
+      <input
+        type="login"
+        value={login}
+        onChange={(e) => setLogin(e.target.value)}
+        placeholder="Login"
+      />
       <input
         type="email"
         value={email}
