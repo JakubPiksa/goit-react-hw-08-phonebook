@@ -3,8 +3,7 @@ import { loginSuccess, logout, setUserInfo } from './actions';
 
 const initialState = {
   isLoggedIn: false,
-  userInfo: null,
-  // Other initial state properties
+
 };
 
 const authReducer = createReducer(initialState, (builder) => {
@@ -20,7 +19,7 @@ const authReducer = createReducer(initialState, (builder) => {
     .addCase(setUserInfo, (state, action) => {
       state.userInfo = action.payload;
     });
-  // Define other authentication reducers here as needed
+
 });
 
 export default authReducer;

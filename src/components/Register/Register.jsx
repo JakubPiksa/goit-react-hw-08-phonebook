@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { register } from 'redux/auth/operations'
 
 const Register = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [login, setLogin] = useState('')
+  const [login, setLogin] = useState(''); 
 
   const handleRegister = () => {
-    // Implement registration logic here
+    const credentials = { email, password, login }; 
+    dispatch(register(credentials));
   };
 
   return (
     <div>
       <h2>Register</h2>
       <input
-        type="login"
+        type="text"
         value={login}
         onChange={(e) => setLogin(e.target.value)}
         placeholder="Login"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deleteContact } from '../../store/reducers/contacts';
+import { deleteContact } from 'redux/contacts/reducers';
 import { useSelector } from 'react-redux'; 
 import css from './contactList.module.css'
 
